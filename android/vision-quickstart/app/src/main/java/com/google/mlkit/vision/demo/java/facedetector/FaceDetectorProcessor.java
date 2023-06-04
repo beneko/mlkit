@@ -17,12 +17,15 @@
 package com.google.mlkit.vision.demo.java.facedetector;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.PointF;
 import android.util.Log;
 import androidx.annotation.NonNull;
 import com.google.android.gms.tasks.Task;
 import com.google.mlkit.vision.common.InputImage;
 import com.google.mlkit.vision.demo.GraphicOverlay;
+import com.google.mlkit.vision.demo.R;
 import com.google.mlkit.vision.demo.java.VisionProcessorBase;
 import com.google.mlkit.vision.demo.preference.PreferenceUtils;
 import com.google.mlkit.vision.face.Face;
@@ -40,8 +43,11 @@ public class FaceDetectorProcessor extends VisionProcessorBase<List<Face>> {
 
   private final FaceDetector detector;
 
+  private final Bitmap maskFilter;
+
   public FaceDetectorProcessor(Context context) {
     super(context);
+    maskFilter = BitmapFactory.decodeResource(context.getResources(), R.drawable.face_mask_1);
     FaceDetectorOptions faceDetectorOptions = PreferenceUtils.getFaceDetectorOptions(context);
     Log.v(MANUAL_TESTING_LOG, "Face detector options: " + faceDetectorOptions);
     detector = FaceDetection.getClient(faceDetectorOptions);
@@ -60,8 +66,9 @@ public class FaceDetectorProcessor extends VisionProcessorBase<List<Face>> {
 
   @Override
   protected void onSuccess(@NonNull List<Face> faces, @NonNull GraphicOverlay graphicOverlay) {
+
     for (Face face : faces) {
-      graphicOverlay.add(new FaceGraphic(graphicOverlay, face));
+      graphicOverlay.add(new FaceGraphic(graphicOverlay, face, maskFilter));
       logExtrasForTesting(face);
     }
   }

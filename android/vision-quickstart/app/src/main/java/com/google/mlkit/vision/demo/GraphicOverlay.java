@@ -20,6 +20,7 @@ import static java.lang.Math.max;
 import static java.lang.Math.min;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Matrix;
 import android.graphics.Paint;
@@ -108,6 +109,11 @@ public class GraphicOverlay extends View {
     /** Adjusts the supplied value from the image scale to the view scale. */
     public float scale(float imagePixel) {
       return imagePixel * overlay.scaleFactor;
+    }
+
+    /** Adjusts the size of the mask filter relative to the face's dimensions */
+    public Bitmap scaleMaskFilter(Bitmap maskFilter, float left,float top,float right,float bottom ) {
+      return Bitmap.createScaledBitmap(maskFilter, (int) (right-left), (int) (bottom-top), true);
     }
 
     /** Returns the application context of the app. */
