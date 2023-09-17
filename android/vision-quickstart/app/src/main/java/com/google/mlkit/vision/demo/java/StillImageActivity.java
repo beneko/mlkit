@@ -57,11 +57,6 @@ import com.google.mlkit.vision.label.defaults.ImageLabelerOptions;
 import com.google.mlkit.vision.objects.custom.CustomObjectDetectorOptions;
 import com.google.mlkit.vision.objects.defaults.ObjectDetectorOptions;
 import com.google.mlkit.vision.pose.PoseDetectorOptionsBase;
-import com.google.mlkit.vision.text.chinese.ChineseTextRecognizerOptions;
-import com.google.mlkit.vision.text.devanagari.DevanagariTextRecognizerOptions;
-import com.google.mlkit.vision.text.japanese.JapaneseTextRecognizerOptions;
-import com.google.mlkit.vision.text.korean.KoreanTextRecognizerOptions;
-import com.google.mlkit.vision.text.latin.TextRecognizerOptions;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -210,11 +205,6 @@ public final class StillImageActivity extends AppCompatActivity {
     options.add(CUSTOM_AUTOML_LABELING);
     options.add(POSE_DETECTION);
     options.add(SELFIE_SEGMENTATION);
-    options.add(TEXT_RECOGNITION_LATIN);
-    options.add(TEXT_RECOGNITION_CHINESE);
-    options.add(TEXT_RECOGNITION_DEVANAGARI);
-    options.add(TEXT_RECOGNITION_JAPANESE);
-    options.add(TEXT_RECOGNITION_KOREAN);
     options.add(FACE_MESH_DETECTION);
 
     // Creating adapter for featureSpinner
