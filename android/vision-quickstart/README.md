@@ -27,7 +27,7 @@ Features that are included in this Quickstart app:
 This app supports three usage scenarios: Live Camera, Static Image, and CameraX enabled live camera.
 
 ### Live Camera scenario
-It uses the camera preview as input and contains these API workflows: Object detection & tracking, Face Detection, Face Mesh Detection, Text Recognition, Image Labeling, and Pose Detection. There's also a settings page that allows you to configure several options:
+It uses the camera preview as input and contains these API workflows: Object detection & tracking, Face Detection, Face Mesh Detection, Image Labeling, and Pose Detection. There's also a settings page that allows you to configure several options:
 * Camera
     * Preview size - Specify the preview size of rear/front camera manually (Default size is chosen appropriately based on screen size)
     * Enable live viewport - Toggle between blocking camera preview by API processing and result rendering or not
