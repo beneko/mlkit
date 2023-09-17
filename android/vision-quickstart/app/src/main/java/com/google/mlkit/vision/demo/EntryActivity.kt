@@ -29,23 +29,14 @@ import androidx.core.content.ContextCompat
 import com.google.mlkit.vision.demo.java.ChooserActivity
 import java.util.ArrayList
 
-class EntryChoiceActivity : AppCompatActivity(), ActivityCompat.OnRequestPermissionsResultCallback {
+class EntryActivity : AppCompatActivity(), ActivityCompat.OnRequestPermissionsResultCallback {
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_vision_entry_choice)
 
     findViewById<TextView>(R.id.java_entry_point).setOnClickListener {
-      val intent = Intent(this@EntryChoiceActivity, ChooserActivity::class.java)
-      startActivity(intent)
-    }
-
-    findViewById<TextView>(R.id.kotlin_entry_point).setOnClickListener {
-      val intent =
-        Intent(
-          this@EntryChoiceActivity,
-          com.google.mlkit.vision.demo.kotlin.ChooserActivity::class.java
-        )
+      val intent = Intent(this@EntryActivity, ChooserActivity::class.java)
       startActivity(intent)
     }
 
@@ -95,7 +86,7 @@ class EntryChoiceActivity : AppCompatActivity(), ActivityCompat.OnRequestPermiss
   }
 
   companion object {
-    private const val TAG = "EntryChoiceActivity"
+    private const val TAG = "EntryActivity"
     private const val PERMISSION_REQUESTS = 1
 
     private val REQUIRED_RUNTIME_PERMISSIONS =
