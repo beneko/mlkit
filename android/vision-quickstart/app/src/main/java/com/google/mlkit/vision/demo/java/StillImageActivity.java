@@ -44,7 +44,6 @@ import com.google.mlkit.vision.demo.BitmapUtils;
 import com.google.mlkit.vision.demo.GraphicOverlay;
 import com.google.mlkit.vision.demo.R;
 import com.google.mlkit.vision.demo.VisionImageProcessor;
-import com.google.mlkit.vision.demo.java.barcodescanner.BarcodeScannerProcessor;
 import com.google.mlkit.vision.demo.java.facedetector.FaceDetectorProcessor;
 import com.google.mlkit.vision.demo.java.labeldetector.LabelDetectorProcessor;
 import com.google.mlkit.vision.demo.java.objectdetector.ObjectDetectorProcessor;
@@ -79,7 +78,6 @@ public final class StillImageActivity extends AppCompatActivity {
   private static final String CUSTOM_AUTOML_OBJECT_DETECTION =
       "Custom AutoML Object Detection (Flower)";
   private static final String FACE_DETECTION = "Face Detection";
-  private static final String BARCODE_SCANNING = "Barcode Scanning";
   private static final String IMAGE_LABELING = "Image Labeling";
   private static final String IMAGE_LABELING_CUSTOM = "Custom Image Labeling (Birds)";
   private static final String CUSTOM_AUTOML_LABELING = "Custom AutoML Image Labeling (Flower)";
@@ -213,7 +211,6 @@ public final class StillImageActivity extends AppCompatActivity {
     options.add(OBJECT_DETECTION_CUSTOM);
     options.add(CUSTOM_AUTOML_OBJECT_DETECTION);
     options.add(FACE_DETECTION);
-    options.add(BARCODE_SCANNING);
     options.add(IMAGE_LABELING);
     options.add(IMAGE_LABELING_CUSTOM);
     options.add(CUSTOM_AUTOML_LABELING);
@@ -434,9 +431,6 @@ public final class StillImageActivity extends AppCompatActivity {
         case FACE_DETECTION:
           Log.i(TAG, "Using Face Detector Processor");
           imageProcessor = new FaceDetectorProcessor(this);
-          break;
-        case BARCODE_SCANNING:
-          imageProcessor = new BarcodeScannerProcessor(this);
           break;
         case TEXT_RECOGNITION_LATIN:
           if (imageProcessor != null) {

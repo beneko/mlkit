@@ -11,7 +11,6 @@ Features that are included in this Quickstart app:
 * [Face Detection](https://developers.google.com/ml-kit/vision/face-detection/android) - Detect faces in real time and static images
 * [Face Mesh Detection](https://developers.google.com/ml-kit/vision/face-mesh-detection/android) - Detect face mesh in real time and static images
 * [Text Recognition](https://developers.google.com/ml-kit/vision/text-recognition/android) - Recognize text in real time and static images
-* [Barcode Scanning](https://developers.google.com/ml-kit/vision/barcode-scanning/android)  - Scan barcodes in real time and static images
 * [Image Labeling](https://developers.google.com/ml-kit/vision/image-labeling/android) - Label images in real time and static images
 * [Custom Image Labeling - Birds](https://developers.google.com/ml-kit/vision/image-labeling/custom-models/android) - Label images of birds with a custom TensorFlow Lite model.
 * [Pose Detection](https://developers.google.com/ml-kit/vision/pose-detection/android) - Detect the position of the human body in real time.
@@ -29,7 +28,7 @@ Features that are included in this Quickstart app:
 This app supports three usage scenarios: Live Camera, Static Image, and CameraX enabled live camera.
 
 ### Live Camera scenario
-It uses the camera preview as input and contains these API workflows: Object detection & tracking, Face Detection, Face Mesh Detection, Text Recognition, Barcode Scanning, Image Labeling, and Pose Detection. There's also a settings page that allows you to configure several options:
+It uses the camera preview as input and contains these API workflows: Object detection & tracking, Face Detection, Face Mesh Detection, Text Recognition, Image Labeling, and Pose Detection. There's also a settings page that allows you to configure several options:
 * Camera
     * Preview size - Specify the preview size of rear/front camera manually (Default size is chosen appropriately based on screen size)
     * Enable live viewport - Toggle between blocking camera preview by API processing and result rendering or not
